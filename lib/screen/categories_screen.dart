@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import './dummy_data.dart';
-import './catergory_items.dart';
+import '../data/dummy_data.dart';
+import '../widgets/catergory_items.dart';
 
 class CategoriesScreen extends StatelessWidget {
+  static var routeName;
+
   const CategoriesScreen({super.key});
 
   @override
@@ -12,7 +14,8 @@ class CategoriesScreen extends StatelessWidget {
       body: GridView(
         padding: const EdgeInsets.all(20), // Add padding for better UI
         children: DUMMY_CATEGORIES
-            .map((catData) => CategoryItem(catData.title, catData.color))
+            .map((catData) =>
+                CategoryItem(catData.id, catData.title, catData.color))
             .toList(), // Fix map syntax
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
