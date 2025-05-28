@@ -40,7 +40,7 @@ class CategoryItem extends StatelessWidget {
           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Colors.white, // ✅ Ensured good contrast
+                color: Colors.black, // ✅ Ensured good contrast
               ),
         ),
       ),
